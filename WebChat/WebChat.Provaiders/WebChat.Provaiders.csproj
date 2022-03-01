@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\WebChat.Domain\WebChat.Domain.csproj" />
     <ProjectReference Include="..\WebChat.Models\WebChat.Models.csproj" />
   </ItemGroup>

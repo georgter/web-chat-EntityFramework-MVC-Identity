@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+    <form class="form-horizontal" method="post">
+        <div class="form-group">
+            <label for="exampleInputLogin">Введите Логин </label>
+            <input type="text" class="form-control" id="exampleInputLogin" aria-describedby="emailHelp" placeholder="Enter Login" name="Login">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Введите Пароль</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="Pass">
+        </div>
+        <button type="submit" class="btn btn-primary" action="Login">Войти</button>
+        <a href="@Url.Action("Registet","User")" class="btn btn-primary">Зарегистрироваться</a>
+        <div style="color:red">
+            @Html.ValidationMessage("error")
+        </div>
+    </form>
+

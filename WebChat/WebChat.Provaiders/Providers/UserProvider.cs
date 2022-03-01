@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using WebChat.Domain;
 using WebChat.Models;
@@ -9,6 +10,29 @@ namespace WebChat.Provaiders.Providers
 {
     public class UserProvider : IServiceUser
     {
+        public UserModels Authorization(string Login, string Pass)
+        {
+
+            using (var db = new dbContext())
+            {
+                var us = db.Users.FirstOrDefault(x => x.Login == Login && x.Pass == Pass);
+                if (us != null)
+                {
+
+                    return us;
+                }
+                return null;
+            }
+        }
+
+        public bool isThere(string name)
+        {
+            using (var db = new dbContext())
+            {
+                var there = db.Users.FirstOrDefault(x => x.Login == name);
+                return there== null? false : true;
+            }
+        }
 
         public void Registration(UserModels user)
         {

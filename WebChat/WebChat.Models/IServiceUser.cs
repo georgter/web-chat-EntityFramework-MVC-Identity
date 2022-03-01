@@ -8,6 +8,9 @@ namespace WebChat.Models
     public interface IServiceUser
     {
         void Registration(UserModels user);
-        
+
+        bool isThere(string name);
+
+        UserModels Authorization(string Login, string Pass);
     }
 }
