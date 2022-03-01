@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace WebChat.Domain.Models
+namespace WebChat.Models.Models
 {
-    class UserModel
+    public class UserModels
     {
         public int Id { get; set; }
         public string Name { get; set; }
