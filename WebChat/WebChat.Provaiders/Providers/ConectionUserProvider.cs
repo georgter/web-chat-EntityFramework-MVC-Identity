@@ -24,7 +24,7 @@ namespace WebChat.Provaiders.Providers
             }
         }
         /// <summary>
-        /// Присвоения статуса онлайн нa авторизации и регистрациии
+        /// Присвоения статуса онлайн нa авторизации и регистрациии Надо раздилить 
         /// </summary>
         /// <param name="user"></param>
         public void ConectionStatusOnline(UserModels user)
