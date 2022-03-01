@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace WebChat.Models.Models
+namespace WebChat.Provaiders.Models
 {
-    public abstract class UserModels
+    public class User
     {
-        public int Id { get; set; }
+        
         public string Name { get; set; }
         public string Login { get; set; }
         public string Pass { get; set; }

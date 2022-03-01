@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -6,11 +6,6 @@
 
   <ItemGroup>
     <PackageReference Include="EntityFramework" Version="6.0.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\WebChat.Models\WebChat.Models.csproj" />
-    <ProjectReference Include="..\WebChat.Provaiders\WebChat.Provaiders.csproj" />
   </ItemGroup>
 
 </Project>
