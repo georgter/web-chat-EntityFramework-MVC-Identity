@@ -7,6 +7,8 @@ namespace WebChat.Models
 {
     public interface IServiceConectionUser
     {
-        void ConectionStatus(UserModels user);
+        void ConectionStatusOnline(UserModels user);
+        void ConectionStatusOffline(UserModels user);
+       
     }
 }

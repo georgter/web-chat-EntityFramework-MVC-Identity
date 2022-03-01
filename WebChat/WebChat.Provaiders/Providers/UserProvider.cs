@@ -11,6 +11,12 @@ namespace WebChat.Provaiders.Providers
     public class UserProvider : IServiceUser
     {
         ConectionUserProvider cup = new ConectionUserProvider();
+        /// <summary>
+        /// Автаризация нового пользователя
+        /// </summary>
+        /// <param name="Login"></param>
+        /// <param name="Pass"></param>
+        /// <returns></returns>
         public UserModels Authorization(string Login, string Pass)
         {
 
@@ -19,7 +25,7 @@ namespace WebChat.Provaiders.Providers
                 var us = db.Users.FirstOrDefault(x => x.Login == Login && x.Pass == Pass);
                 if (us != null)
                 {
-                    cup.ConectionStatus(us);
+                    cup.ConectionStatusOnline(us);
                     return us;
                 }
                 return null;
@@ -38,7 +44,10 @@ namespace WebChat.Provaiders.Providers
                 return there== null? false : true;
             }
         }
-
+        /// <summary>
+        /// Регистрация нового пользователя
+        /// </summary>
+        /// <param name="user"></param>
         public void Registration(UserModels user)
         {
           
@@ -56,7 +65,7 @@ namespace WebChat.Provaiders.Providers
                     var newUser = new UserModels { Name = user.Name, Login = user.Login, Pass = user.Pass };
                     db.Users.Add(newUser);
 
-                    cup.ConectionStatus(newUser);
+                    cup.ConectionStatusOnline(newUser);
 
                     db.SaveChanges();
                 }

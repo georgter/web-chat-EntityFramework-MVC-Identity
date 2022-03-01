@@ -10,7 +10,24 @@ namespace WebChat.Provaiders.Providers
 {
     class ConectionUserProvider : IServiceConectionUser
     {
-        public void ConectionStatus(UserModels user)
+        /// <summary>
+        /// Присвоения статуса офлай
+        /// </summary>
+        /// <param name="user"></param>
+        public void ConectionStatusOffline(UserModels user)
+        {
+            using (var db = new dbContext())
+            {
+                var us = db.ConectionUsers.FirstOrDefault(x => x.UserName == user.Name && x.UserId == user.Id);
+                us.Status = true;
+                db.SaveChanges();
+            }
+        }
+        /// <summary>
+        /// Присвоения статуса онлайн нa авторизации и регистрациии
+        /// </summary>
+        /// <param name="user"></param>
+        public void ConectionStatusOnline(UserModels user)
         {
             using (var db = new dbContext())
             {
@@ -27,6 +44,14 @@ namespace WebChat.Provaiders.Providers
                     db.SaveChanges();
                 }
             }
+        }
+        /// <summary>
+        /// Вывод листа Юзеров тех кто онлайн
+        /// </summary>
+        /// <returns></returns>
+        public List<UserModels> StatusOnline()
+        {
+            throw new NotImplementedException();
         }
     }
 }
