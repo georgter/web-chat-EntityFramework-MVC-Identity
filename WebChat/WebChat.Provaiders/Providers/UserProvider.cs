@@ -7,13 +7,12 @@ using WebChat.Models.Models;
 
 namespace WebChat.Provaiders.Providers
 {
-    class UserProvider : IServiceUser
+    public class UserProvider : IServiceUser
     {
 
         public void Registration(UserModels user)
         {
-           
-
+          
                 if((user.Name!= null && user.Name.Trim() == "")
                     || (user.Pass!= null && user.Pass.Trim()=="")
                     ||(user.Login != null && user.Login.Trim() == "")  

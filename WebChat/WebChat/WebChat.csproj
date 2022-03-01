@@ -121,6 +121,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -162,6 +163,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\User\Registet.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -181,6 +183,10 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\WebChat.Models\WebChat.Models.csproj">
+      <Project>{b957ac9b-0651-4552-b794-8cd28965c9e7}</Project>
+      <Name>WebChat.Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WebChat.Provaiders\WebChat.Provaiders.csproj">
       <Project>{02676d43-e77b-432e-9f53-8fb6a56b44b2}</Project>
       <Name>WebChat.Provaiders</Name>
