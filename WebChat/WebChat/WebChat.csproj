@@ -181,9 +181,9 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WebChat.Domain\WebChat.Domain.csproj">
-      <Project>{7be30b21-2e22-4aa4-9427-f46100f97788}</Project>
-      <Name>WebChat.Domain</Name>
+    <ProjectReference Include="..\WebChat.Provaiders\WebChat.Provaiders.csproj">
+      <Project>{02676d43-e77b-432e-9f53-8fb6a56b44b2}</Project>
+      <Name>WebChat.Provaiders</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

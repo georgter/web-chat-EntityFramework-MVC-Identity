@@ -8,4 +8,8 @@
     <PackageReference Include="EntityFramework" Version="6.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WebChat.Models\WebChat.Models.csproj" />
+  </ItemGroup>
+
 </Project>

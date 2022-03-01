@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Data.Entity;
-using WebChat.Domain.Models;
+using WebChat.Models.Models;
+
 namespace WebChat.Domain
 {
     public class dbContext :DbContext
     {
         public dbContext() : base("DbConnection") { }
 
-        public DbSet<User> Users { get; set; }
+        public DbSet<UserModels> Users { get; set; }
     }
 }

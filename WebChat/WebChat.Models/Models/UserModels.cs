@@ -4,7 +4,7 @@ using System.Text;
 
 namespace WebChat.Models.Models
 {
-    public abstract class UserModels
+    public  class UserModels
     {
         public int Id { get; set; }
         public string Name { get; set; }
