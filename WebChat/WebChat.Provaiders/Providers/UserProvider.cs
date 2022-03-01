@@ -10,6 +10,7 @@ namespace WebChat.Provaiders.Providers
 {
     public class UserProvider : IServiceUser
     {
+        ConectionUserProvider cup = new ConectionUserProvider();
         public UserModels Authorization(string Login, string Pass)
         {
 
@@ -18,13 +19,17 @@ namespace WebChat.Provaiders.Providers
                 var us = db.Users.FirstOrDefault(x => x.Login == Login && x.Pass == Pass);
                 if (us != null)
                 {
-
+                    cup.ConectionStatus(us);
                     return us;
                 }
                 return null;
             }
         }
-
+        /// <summary>
+        /// Проверка есть ли такой пользователь 
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         public bool isThere(string name)
         {
             using (var db = new dbContext())
@@ -50,8 +55,10 @@ namespace WebChat.Provaiders.Providers
                 {
                     var newUser = new UserModels { Name = user.Name, Login = user.Login, Pass = user.Pass };
                     db.Users.Add(newUser);
-                    db.SaveChanges();
 
+                    cup.ConectionStatus(newUser);
+
+                    db.SaveChanges();
                 }
             }
         }

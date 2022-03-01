@@ -11,5 +11,7 @@ namespace WebChat.Domain
         public dbContext() : base("DbConnection") { }
 
         public DbSet<UserModels> Users { get; set; }
+
+        public DbSet<ConectionUser> ConectionUsers { get; set; }
     }
 }
